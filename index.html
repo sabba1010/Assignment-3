@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Browse Pest</title>
+        <link rel="stylesheet" href="c1-assets/style.css">
         <!-- Google Font CDN -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,67 +45,81 @@ body{
       }
     </script>
   </head>
+
   <body>
 <!-- Navbar -->
-<div class="bg-[#FFF9F4]">
+<div class="bg-[#FFF9F4] flex items-center">
     <div class="navbar">
-        <div class="navbar-start px-36">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul
-              tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
-              <li><a>Item 3</a></li>
-            </ul>
+        <div class="navbar-start md:px-36 space-x-2 ">
+          <div>
+            <img src="c1-assets/logo-header.png" alt="">
           </div>
-          <a class="btn btn-ghost text-xl">Browse4Pets</a>
+          <h1 class="text-3xl sora hidden md:block">
+            Browse<span class="text-[#FFDC26]">4</span>Pets 
+        </h1>
         </div>
         <div class="navbar-center hidden lg:flex ">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
+          <ul class="menu menu-horizontal px-1 text-xl">
+            <li><a>Find a pet</a></li>
             <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
+            <a>Breeds</a>
             </li>
-            <li><a>Item 3</a></li>
+            <li><a>Contact us</a></li>
           </ul>
         </div>
-        <div class="navbar-end px-36">
-          <a class="btn">Button</a>
+      
+        <!-- btn -->
+        <div class="navbar-end md:px-36 items-center hidden md:block">
+              <!-- icon -->
+      <div class="flex gap-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+          </svg>
+              <div class="gap-x-3 sora">
+                <button class="btn  text-2xl px-6 border-[#FFDC26] rounded-lg font-light">Login</button>
+              <button class="btn px-7 text-2xl  bg-[#FFDC26] rounded-lg font-light">
+                Register
+              </button>
+            </div>
+
+      </div>
+        
         </div>
       </div>
+      <div class="relative place-items-end ">
+        <!-- Button to toggle dropdown (hamburger) -->
+        <button class="sm:hidden block  text-black  rounded-lg" id="dropdownButton">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      
+        <!-- Dropdown menu -->
+        <div id="dropdownMenu " class="absolute hidden bg-white shadow-lg rounded-lg w-48 right-0 mt-2">
+          <ul>
+            li><a>Find a pet</a></li>
+            <li>
+            <a>Breeds</a>
+            </li>
+            <li><a>Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
 </div>
 
 
 
 
 
+
+
+
+
+  
 
 
 

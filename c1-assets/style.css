@@ -1,0 +1,7 @@
+/* Hide button when the screen width is between 300px and 650px */
+@media (min-width: 300px) and (max-width: 650px) {
+    button {
+      display: none; /* This will hide the button */
+    }
+  }
+  
